@@ -1,13 +1,12 @@
 # Fishing Macro
 
-A **Python-based** fishing macro that automates a mini-game by detecting colors on the screen and clicking at the correct time.
+A **Python-based** fishing macro for Lootify that automates the fishing mini-game by detecting colors on the screen and clicking at the correct time.
 
-> **Disclaimer**: Game automation may violate your game’s Terms of Service (TOS).  
-> Use this script **at your own risk**.
+> **Disclaimer**: Game automation may violate Lootify's TOS. Use this script **at your own risk**.
 
 ## Features
 
-- Continuously detects a **cyan** mini-game background and a **yellow** moving bar.
+- Continuously detects a **cyan** background and the **yellow** moving bar.
 - Tracks and **clicks** automatically when conditions are met.
 - Allows **configuration** for screen regions, color tolerance, and detection speed.
 
