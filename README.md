@@ -23,43 +23,34 @@ A **Python-based** fishing macro that automates a mini-game by detecting colors 
 
 1. **Clone or Download** the Repository
    - Click the green “Code” button on GitHub, then choose “Download ZIP”
-     or run `git clone https://github.com/<your-username>/<your-repo>.git` in your terminal.
+     or run `git clone https://github.com/cnehm006/secretfish.git` in your terminal.
 
 2. **Open a Terminal or Command Prompt**
    - Navigate to the folder where you cloned/downloaded the files.
 
 3. **Install Dependencies**
-   - Run the following command to install the required Python libraries:
-     ```bash
-     pip install -r requirements.txt
-     ```
-   - Or, if you want to install them manually:
+   - Run the following commands one at a time to install the required Python libraries:
      ```bash
      pip install pyautogui
+     ```
+     ```bash
      pip install pillow
      ```
-     *(Adjust if your script requires additional packages like tkinter or opencv-python.)*
-
-4. **Verify Installation**
-   - In the same terminal, run:
-     ```bash
-     python --version
-     pip freeze
-     ```
-   - Confirm Python is **3.7+** and that you see the required libraries (pyautogui, etc.) in the installed packages list.
 
 ## Usage
 
-1. **Configure the Script**
-   - Open the main Python file (e.g., `fishing_macro.py`) in a text editor.
-   - Adjust the `REGION`, color values (`CYAN_RGB`, `YELLOW_RGB`), and detection settings (`COLOR_TOLERANCE`, etc.) to match your game’s on-screen positions and colors.
+1. **Tweak CPU Usage**
+   - Look for line 9:
+     ```python
+     SLEEP_BETWEEN_CHECKS = 0.0001
+     ```
+     Increase this value (e.g., `0.05` or `0.1`) to **lower** CPU usage (but slower detection), or decrease it to **speed up** detection (but higher CPU usage).
 
 2. **Run the Script**
    - In your terminal, from the project folder, type:
      ```bash
-     python fishing_macro.py
+     python script.py
      ```
-   - (Replace `fishing_macro.py` with the actual script name if different.)
 
 3. **Switch to Your Game Window**
    - When the script starts, it may display a semi-transparent rectangle outlining the detection region. Close it when you’re ready.
@@ -72,8 +63,7 @@ A **Python-based** fishing macro that automates a mini-game by detecting colors 
   - Make sure the `REGION` matches the exact on-screen location.
 
 - **Too Slow or High CPU Usage**
-  - Increase sleeps (`SLEEP_BETWEEN_CHECKS`) or use pixel-skipping (if supported in the script).
-  - Use smaller detection regions if your screen is large.
+  - Increase sleeps (`SLEEP_BETWEEN_CHECKS`) or use pixel-skipping (`SKIP`).
 
 - **False Positives**
   - Make the bounding box smaller or refine the color/tolerance settings to avoid background detections.
