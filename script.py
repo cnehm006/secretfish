@@ -2,7 +2,7 @@ import time
 import tkinter as tk
 import pyautogui
 REGION = (865, 1160, 840, 75)
-CYAN_RGB = (142, 252, 189)
+CYAN_RGB = (34, 166, 133)
 YELLOW_RGB = (255, 208, 37)
 COLOR_TOLERANCE = 40
 WAIT_FOR_CYAN_TIMEOUT = 15
