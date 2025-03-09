@@ -1,1 +1,2 @@
-# secretfish
+# Shhhh... 
+A fishing macro for Lootify.
